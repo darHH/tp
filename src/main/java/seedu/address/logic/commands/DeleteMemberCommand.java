@@ -37,6 +37,7 @@ public class DeleteMemberCommand extends Command {
      */
     public DeleteMemberCommand(Index targetIndex, String member) {
         requireNonNull(member);
+        requireNonNull(targetIndex);
         this.targetIndex = targetIndex;
         this.member = member;
     }
@@ -53,7 +54,7 @@ public class DeleteMemberCommand extends Command {
 
         Group groupToEdit = lastShownList.get(targetIndex.getZeroBased());
 
-        // Get the person from the model (throws PersonNotFoundException if not found)
+        // Get the person from the model (throws Exception if not found)
         Person personToRemove;
         try {
             personToRemove = model.getPerson(member);
