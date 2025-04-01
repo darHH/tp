@@ -9,6 +9,7 @@ import seedu.address.commons.util.ToStringBuilder;
 import seedu.address.logic.Messages;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
+import seedu.address.model.group.Group;
 import seedu.address.model.person.Person;
 
 /**
@@ -40,8 +41,19 @@ public class DeleteCommand extends Command {
             throw new CommandException(Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);
         }
 
+        // Get the list of groups in the model
+        List<Group> groups = model.getFilteredGroupList();
         Person personToDelete = lastShownList.get(targetIndex.getZeroBased());
+
+        // Loop through every group to find and remove the person
+        for (Group group : groups) {
+            if (group.getMembers().contains(personToDelete)) {
+                group.removeMember(personToDelete);
+            }
+        }
+
         model.deletePerson(personToDelete);
+        model.sortFilteredGroupList(); // This updates the group list to reflect changes
         return new CommandResult(String.format(MESSAGE_DELETE_PERSON_SUCCESS, Messages.format(personToDelete)));
     }
 
