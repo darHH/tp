@@ -10,6 +10,7 @@ import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
 import seedu.address.model.group.Group;
 import seedu.address.model.person.Person;
+import seedu.address.model.person.exceptions.PersonNotFoundException;
 
 /**
  * Deletes a member from an existing group in the address book.
@@ -21,7 +22,8 @@ public class DeleteMemberCommand extends Command {
             + "Parameters: INDEX (must be a positive integer) n/PERSON_NAME\n"
             + "Example: " + COMMAND_WORD + " g/1 n/John Doe";
     public static final String MESSAGE_SUCCESS = "Deleted member: %1$s from group: %2$s";
-    public static final String MESSAGE_PERSON_NOT_FOUND = "Person: %1$s is not in group: %2$s";
+    public static final String MESSAGE_PERSON_NOT_FOUND = "Person: %1$s not found in group: %2$s";
+    public static final String MESSAGE_PERSON_NOT_IN_ADDRESSBOOK = "Person: %1$s not found in the address book.";
 
 
     private final Index targetIndex;
@@ -51,10 +53,14 @@ public class DeleteMemberCommand extends Command {
 
         Group groupToEdit = lastShownList.get(targetIndex.getZeroBased());
 
-        // Get person from the addressbook
-        Person personToRemove = model.getPerson(member);
+        // Get the person from the model (throws PersonNotFoundException if not found)
+        Person personToRemove;
+        try {
+            personToRemove = model.getPerson(member);
+        } catch (PersonNotFoundException e) {
+            throw new CommandException(String.format(MESSAGE_PERSON_NOT_IN_ADDRESSBOOK, member));
+        }
 
-        // If person exist in adddess book,
         // Check if the person exists in the group with exact name matching (case-sensitive)
         boolean doesPersonExist = groupToEdit.getMembers().stream()
                 .anyMatch(person -> person.getName().equals(personToRemove.getName()));
