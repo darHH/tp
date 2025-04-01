@@ -50,48 +50,46 @@ public class UniquePersonList implements Iterable<Person> {
 
     /**
      * Gets a person from the list.
+     * Name must match exactly and it is case sensitive
      * The person must already exist in the list.
      */
     public Person getPerson(String nameOfPersonToGet) {
         requireNonNull(nameOfPersonToGet);
-        List<Person> filteredList = internalList.stream().filter(
-                person -> {
-                    String fullName = person.getName().fullName.toLowerCase();
-                    String personToFind = nameOfPersonToGet.toLowerCase();
 
-                    if (nameOfPersonToGet.contains(" ")) {
-                        return fullName.equals(personToFind);
-                    }
+        // Use stream to filter for exact case-sensitive matches
+        List<Person> filteredList = internalList.stream()
+                .filter(person -> person.getName().fullName.equals(nameOfPersonToGet))
+                .toList();
 
-                    return fullName.contains(personToFind);
-                }).toList();
+        // If no match is found, throw an exception
         if (filteredList.size() == 0) {
             throw new PersonNotFoundException();
         }
+
+        // If there are multiple matches (shouldn't happen), throw an exception
         if (filteredList.size() > 1) {
             throw new DuplicatePersonException();
         }
+
+        // Return the person found
         Person toReturn = filteredList.get(0);
         return toReturn;
     }
 
     /**
-     * returns true if person from the list is unique.
+     * Returns true if person from the list is unique.
+     * Partial matches are not considered, and is case sensitive (ie. must match string exactly)
      * The person must already exist in the list.
      */
     public boolean isPersonUnique(String nameOfPersonToGet) {
         requireNonNull(nameOfPersonToGet);
-        List<Person> filteredList = internalList.stream().filter(
-                person -> {
-                    String fullName = person.getName().fullName.toLowerCase();
-                    String personToFind = nameOfPersonToGet.toLowerCase();
 
-                    if (nameOfPersonToGet.contains(" ")) {
-                        return fullName.equals(personToFind);
-                    }
+        // Use stream to filter for exact matches (case-sensitive)
+        List<Person> filteredList = internalList.stream()
+                .filter(person -> person.getName().fullName.equals(nameOfPersonToGet))
+                .toList();
 
-                    return fullName.contains(personToFind);
-                }).toList();
+        // Return true if there is exactly one person matching the name
         return filteredList.size() == 1;
     }
 
