@@ -21,7 +21,7 @@ Package Model as ModelPackage <<Rectangle>>{
   Class Phone
   Class Tag
   Class Sport
-  Class PostalCode
+  Class Location
 
   Class UniqueGameList
   Class Game
@@ -50,7 +50,7 @@ Person *--> Name
 Person *--> Phone
 Person *--> Email
 Person *--> Address
-Person *--> PostalCode
+Person *--> Location
 Person *--> "*" Tag
 Person *--> "*" Sport
 

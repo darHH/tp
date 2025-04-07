@@ -213,7 +213,7 @@ The Global Sports List Management feature allows users to manage a central repos
 
 The implementation includes several components:
 
-1. **Sport class enhancement**: The `Sport` class has been extended to maintain a static set of valid sports and provide methods for manipulating this set.
+1. **Valid sport tracking**: The `Sport` class maintains a static set of valid sports and provide methods for manipulating this set.
 
 2. **UserPrefs integration**: The global sports list's file path is stored in `UserPrefs`, allowing the path to be persisted and retrieved across application sessions.
 
@@ -223,7 +223,9 @@ The implementation includes several components:
 
 Here's an overview of how the feature works:
 
-![GlobalSportsListSequenceDiagram](images/GlobalSportsListSequenceDiagram.png)
+<img src="diagrams/GlobalSportsListLoadSequenceDiagram.png" width="550" />
+
+![Sequence Diagram for CreateSportCommand execution](diagrams/CreateSportSequenceDiagram.png)
 
 1. On application startup, the `MainApp` class loads the global sports list from the file path specified in `UserPrefs`.
 2. When a user adds a new sport using `CreateSportCommand`, the sport is added to the valid sports list in the `Sport` class and saved to the file.
@@ -236,7 +238,7 @@ Here's an overview of how the feature works:
 **Aspect: Storage of global sports list**
 
 * **Alternative 1 (current choice):** Store the sports list in a separate JSON file.
-  * Pros: Separation of concerns, easier to manage and update independently from contacts.
+  * Pros: Separation of concerns, easier to manage and update independent of contacts.
   * Cons: Requires additional file I/O operations.
 
 * **Alternative 2:** Store the sports list as part of the UserPrefs.
