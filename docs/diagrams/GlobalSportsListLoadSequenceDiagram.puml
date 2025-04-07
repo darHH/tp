@@ -1,0 +1,27 @@
+@startuml
+!include style.puml
+skinparam ArrowFontStyle plain
+
+title Sequence Diagram for Loading Global Sports List
+
+' Box to indicate the Model layer (similar to your example)
+box Model MODEL_COLOR_T1
+participant ":MainApp" as MainApp MODEL_COLOR
+participant ":userPrefs" as userPrefs MODEL_COLOR
+participant "<<class>> Sport" as sport MODEL_COLOR
+end box
+
+' MainApp gets the file path of the global sports list from userPrefs
+MainApp -> userPrefs : getGlobalSportsListFilePath()
+activate userPrefs
+userPrefs --> MainApp : filePath
+deactivate userPrefs
+
+' MainApp loads list of valid sports from json file containing the global sports list
+MainApp -> sport : loadValidSports(filePath)
+activate sport
+sport --> MainApp
+deactivate sport
+
+@enduml
+
