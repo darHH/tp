@@ -117,6 +117,7 @@ FitFriends combines the power of a Command Line Interface (CLI) with the conveni
 
 **Before you start**, we suggest:
 > 💡 **Tip**: Expand the size of the GUI window by clicking on and dragging the sides outwards, which we have done in our examples below.
+
 > 💡 **Tip**: Switch to light and dark mode by clicking on the button at the top right of the interface.
 
 ![FitFriends UI](images/main_ui_dark.png)
