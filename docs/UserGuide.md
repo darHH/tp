@@ -159,7 +159,7 @@ add n/NAME p/PHONE e/EMAIL a/ADDRESS [t/TAG] s/SPORT pc/POSTALCODE
 
 **Example**:
 ```
-add n/John Doe p/98765432 e/johnd@example.com a/John Street, #01-01 t/bestfriend s/tennis pc/123456
+add n/John Doe p/98765432 e/johnd@example.com a/John Street, #01-01 t/bestfriend s/tennis pc/119077
 ```
 
 This adds John Doe to your list of friends with his details and shows he plays tennis.
@@ -202,7 +202,7 @@ edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG] [pc/POSTALCODE]
 
 **Example**:
 ```
-edit 2 n/James Lee p/87654321 a/45 Sunset Blvd pc/018907
+edit 2 n/James Lee p/87654321 a/45 Sunset Blvd pc/119077
 ```
 
 This updates the 2nd friend in your current FitFriends list with a new name, phone number, address, and postal code.
@@ -379,7 +379,7 @@ findsport s/SPORT [s/SPORT]
 
 **Example**:
 ```
-findsport s/basketball tennis
+findsport s/basketball s/tennis
 ```
 
 This shows all friends who play either basketball or tennis (or both).
@@ -399,7 +399,7 @@ findsport pc/POSTALCODE s/SPORT [s/SPORT]
 
 **Example**:
 ```
-findsport pc/259366 s/tennis s/hockey
+findsport pc/119077 s/tennis s/hockey
 ```
 
 This shows all friends who play tennis or hockey, sorted by their proximity to postal code 259366.
@@ -430,7 +430,7 @@ addgame g/SPORT_NAME dt/DATE_TIME pc/POSTAL_CODE
 
 **Example**:
 ```
-addgame g/badminton dt/2025-04-01T15:00:00 pc/259366
+addgame g/badminton dt/2025-04-01T15:00:00 pc/119077
 ```
 
 This creates a new game called "badminton".
@@ -445,15 +445,15 @@ Remove Games you no longer need.
 
 **Format**:
 ```
-deletegame g/INDEX
+deletegame INDEX
 ```
 
 **Example**:
 ```
-deletegame g/1
+deletegame 1
 ```
 
-This deletes the "badminton" game.
+This deletes the game at INDEX.
 
 
 ![Deleting a Game](images/deletegame_command.png)
@@ -477,7 +477,7 @@ addmember g/1 n/Mary Jane
 
 **Format**:
 
-Deletes friends as members from a particular game
+Delete a member from a particular game
 ```
 deletemember g/INDEX n/PERSON_NAME
 ```
@@ -507,9 +507,9 @@ editgamelocation g/1 pc/119077
 | **Action**                   | **Format**                                                                    | **Example**                                                                           |
 |------------------------------|-------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
 | **Help**                     | `help`                                                                        | `help`                                                                                |
-| **Add Friend**               | `add n/NAME p/PHONE e/EMAIL a/ADDRESS [t/TAG] s/SPORT pc/POSTALCODE`          | `add n/John Doe p/98765432 e/johnd@example.com a/John St t/friend s/tennis pc/123456` |
+| **Add Friend**               | `add n/NAME p/PHONE e/EMAIL a/ADDRESS [t/TAG] s/SPORT pc/POSTALCODE`          | `add n/John Doe p/98765432 e/johnd@example.com a/John St t/friend s/tennis pc/119077` |
 | **List Friends**             | `list`                                                                        | `list`                                                                                |
-| **Edit Friend**              | `edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG] [pc/POSTALCODE]` | `edit 2 n/James Lee p/98765432 a/Block 123 pc/654321`                                 |
+| **Edit Friend**              | `edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG] [pc/POSTALCODE]` | `edit 2 n/James Lee p/98765432 a/Block 123 pc/119077`                                 |
 | **Find by Name**             | `find KEYWORD [MORE_KEYWORDS]`                                                | `find James Jake`                                                                     |
 | **Delete Friend**            | `delete INDEX`                                                                | `delete 3`                                                                            |
 | **Clear All**                | `clear`                                                                       | `clear`                                                                               |
@@ -519,9 +519,9 @@ editgamelocation g/1 pc/119077
 | **Add Sport**                | `addsport INDEX s/SPORT`                                                      | `addsport 1 s/tennis`                                                                 |
 | **Delete Sport**             | `deletesport INDEX s/SPORT`                                                   | `deletesport 2 s/basketball`                                                          |
 | **Find by Sport**            | `findsport s/SPORT [s/SPORT]`                                                 | `findsport s/basketball s/tennis`                                                     |
-| **Find by Sport & Location** | `findsport pc/POSTALCODE s/SPORT [s/SPORT]`                                   | `findsport pc/018907 s/tennis s/hockey`                                                 |
-| **Add Game**                 | `addgame g/SPORT_NAME dt/DATE_TIME pc/POSTAL_CODE`                            | `addgame g/volleyball dt/2025-04-04T15:30:00 pc/259366`                               |
-| **Delete Game**              | `deletegame g/INDEX`                                                          | `deletegame g/1`                                                                      |
+| **Find by Sport & Location** | `findsport pc/POSTALCODE s/SPORT [s/SPORT]`                                   | `findsport pc/119077 s/tennis s/hockey`                                                 |
+| **Add Game**                 | `addgame g/SPORT_NAME dt/DATE_TIME pc/POSTAL_CODE`                            | `addgame g/volleyball dt/2025-04-04T15:30:00 pc/119077`                               |
+| **Delete Game**              | `deletegame INDEX`                                                          | `deletegame 1`                                                                      |
 | **Add Member**               | `addmember g/INDEX n/PERSON_NAME`                                             | `addmember g/1 n/Alice Pauline`                                                       |
 | **Delete Member**            | `deletemember g/INDEX n/PERSON_NAME`                                          | `deletemember g/1 n/Alice Pauline`                                                    |
 | **Edit Game Location**            | `editgamelocation g/INDEX pc/POSTAL_CODE`                                          | `editgamelocation g/1 pc/119077`                                                    |
