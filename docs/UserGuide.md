@@ -297,8 +297,7 @@ This adds archery to the global sports list that can be assigned to your contact
 
 ![Creating a Sport](images/createsport_command.png)
 
-> ⚠️ **Note**:
-> * Sport names entered in commands are case-insensitive and will be stored and displayed in lowercase.
+> ⚠️ **Note**: Sport names entered in commands are case-insensitive and will be stored and displayed in lowercase.
 
 ### List All Sports
 View all available sports in the global sports list with their indices.
@@ -374,8 +373,7 @@ This removes basketball from the 2nd contact's list of played sports:
 
 ![Deleting a Sport from a contact](images/deletesport_command.png)
 
-> ⚠️ **Note**:
-> * This command has the same command name as deleting a sport from the global sports list. To prevent accidental deletion of sport from global sports list, ensure you add "s/SPORT" at the end of this command to delete a sport from a contact. 
+> ⚠️ **Note**: This command has the same command name as deleting a sport from the global sports list. To prevent accidental deletion of sport from global sports list, ensure you add "s/SPORT" at the end of this command to delete a sport from a contact. 
 
 ### Find Contacts by Sport
 
@@ -395,7 +393,7 @@ This shows all contacts who play either basketball or tennis (or both):
 
 ![Finding Friends by Sport](images/findsport_command.png)
 
-> 💡 **Pro-tip**: If you run edit, delete, addsport, deletesport commands immediately after this command, these commands will apply to the contact listed at the index as shown by the findsport command. Use this to manage your contacts without having to search for them manually!
+> 💡 **Tip**: If you run edit, delete, addsport, deletesport commands immediately after this command, these commands will apply to the contact listed at the index as shown by the findsport command. Use this to manage your contacts without having to search for them manually!
 
 ### Find Contacts by Sport and Location
 
