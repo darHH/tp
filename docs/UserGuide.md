@@ -144,7 +144,7 @@ Need assistance? The help command gives you quick access to instructions.
 help
 ```
 
-When you type `help` and press <kbd>Enter</kbd>, you'll see a message with a link to this user guide.
+When you type `help` and press <kbd>Enter</kbd>, you'll see a pop-up that looks like this:
 
 
 ![Help Command](images/help_command.png)
@@ -167,7 +167,7 @@ add n/NAME p/PHONE e/EMAIL a/ADDRESS [t/TAG] s/SPORT pc/POSTALCODE
 add n/John Doe p/98765432 e/johnd@example.com a/John Street, #01-01 t/bestfriend s/tennis pc/119077
 ```
 
-This adds John Doe to your list of contacts with his details and shows he plays tennis.
+This adds John Doe to your list of contacts with his details and shows he plays tennis:
 
 ![Adding a Friend](images/add_command.png)
 
@@ -188,7 +188,7 @@ View all your contacts in one place.
 list
 ```
 
-This displays all your contacts in the left panel, sorted by alphabetical order.
+This displays all your contacts in the left panel, sorted by alphabetical order:
 
 ![Listing All Friends](images/list_command.png)
 
@@ -210,7 +210,7 @@ edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG] [pc/POSTALCODE]
 edit 2 n/James Lee p/87654321 a/45 Sunset Blvd pc/119077
 ```
 
-This updates the 2nd contact in your current FitFriends list with a new name, phone number, address, and postal code.
+This updates the 2nd contact in your current FitFriends list with a new name, phone number, address, and postal code:
 
 ![Editing a Friend](images/edit_command.png)
 
@@ -233,7 +233,7 @@ find KEYWORD [MORE_KEYWORDS]
 find james jake
 ```
 
-This will show all contacts whose names contain "James" or "Jake".
+This will show all contacts whose names contain "James" or "Jake":
 
 ![Finding Friends](images/find_command.png)
 
@@ -259,7 +259,7 @@ delete INDEX
 delete 3
 ```
 
-This removes the 3rd contact in your current FitFriends list.
+This removes the 3rd contact in your current FitFriends list:
 
 ![Deleting a Friend](images/delete_command.png)
 
@@ -293,7 +293,7 @@ createsport s/SPORT_NAME
 createsport s/archery
 ```
 
-This adds archery to the global sports list that can be assigned to your contacts.
+This adds archery to the global sports list that can be assigned to your contacts:
 
 ![Creating a Sport](images/createsport_command.png)
 
@@ -308,7 +308,7 @@ View all available sports in the global sports list with their indices.
 listsports
 ```
 
-This displays all sports in alphabetical order with numbers for reference.
+This displays all sports in alphabetical order with numbers for reference:
 
 ![Listing All Sports](images/listsports_command.png)
 
@@ -328,7 +328,7 @@ deletesport INDEX
 deletesport 1
 ```
 
-This removes the first sport in the alphabetically sorted global sports list.
+This removes the first sport in the alphabetically sorted global sports list:
 
 ![Deleting a Sport globally](images/deletesport_global_command.png)
 
@@ -348,7 +348,7 @@ addsport INDEX s/SPORT
 addsport 2 s/basketball
 ```
 
-This adds basketball to the list of sports played by the 2nd contact in your current FitFriends list.
+This adds basketball to the list of sports played by the 2nd contact in your current FitFriends list:
 
 ![Adding a Sport to a contact](images/addsport_command.png)
 
@@ -370,7 +370,7 @@ deletesport INDEX s/SPORT
 deletesport 2 s/basketball
 ```
 
-This removes basketball from the 2nd contact's list of played sports.
+This removes basketball from the 2nd contact's list of played sports:
 
 ![Deleting a Sport from a contact](images/deletesport_command.png)
 
@@ -391,7 +391,7 @@ findsport s/SPORT [s/SPORT]
 findsport s/basketball s/tennis
 ```
 
-This shows all contacts who play either basketball or tennis (or both).
+This shows all contacts who play either basketball or tennis (or both):
 
 ![Finding Friends by Sport](images/findsport_command.png)
 
@@ -411,7 +411,7 @@ findsport pc/POSTALCODE s/SPORT [s/SPORT]
 findsport pc/119077 s/tennis s/hockey
 ```
 
-This shows all contacts who play tennis or hockey, sorted by their proximity to postal code 119077.
+This shows all contacts who play tennis or hockey, sorted by their proximity to postal code 119077:
 
 ![Finding by Sport and Location](images/findsport_location_command.png)
 
@@ -442,11 +442,9 @@ addgame g/SPORT_NAME dt/DATE_TIME pc/POSTAL_CODE
 addgame g/badminton dt/2025-04-01T15:00:00 pc/119077
 ```
 
-This creates a new game called "badminton".
-
+This creates a new game called "badminton":
 
 ![Adding a Game](images/addgame_command.png)
-
 
 ### Delete Game
 
@@ -462,11 +460,9 @@ deletegame INDEX
 deletegame 1
 ```
 
-This deletes the game at index 1.
-
+This deletes the game at index 1:
 
 ![Deleting a Game](images/deletegame_command.png)
-
 
 ### Add Member to Game
 
@@ -481,7 +477,7 @@ addmember g/INDEX n/PERSON_NAME
 ```
 addmember g/1 n/John Doe
 ```
-This adds the contact with name John Doe to game at index 1
+This adds the contact with name John Doe to game at index 1:
 
 ![Adding a member](images/addmember_command.png)
 
@@ -499,7 +495,7 @@ deletemember g/INDEX n/PERSON_NAME
 deletemember g/1 n/John Doe
 ```
 
-This deletes the contact with name John Doe from game at index 1
+This deletes the contact with name John Doe from game at index 1:
 
 ![Deleting a member](images/deletemember_command.png)
 
@@ -517,7 +513,7 @@ editgamelocation g/INDEX pc/POSTAL_CODE
 editgamelocation g/1 pc/639798
 ```
 
-This changes the postal code of game at index 1 to 639798
+This changes the postal code of game at index 1 to 639798:
 
 ![Editing Game Location](images/editgamelocation_command.png)
 ---
