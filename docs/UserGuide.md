@@ -461,7 +461,7 @@ deletegame INDEX
 deletegame 1
 ```
 
-This deletes the game at INDEX.
+This deletes the game at index 1.
 
 
 ![Deleting a Game](images/deletegame_command.png)
@@ -480,7 +480,7 @@ addmember g/INDEX n/PERSON_NAME
 ```
 addmember g/1 n/John Doe
 ```
-This adds the contact with name PERSON_NAME to game at INDEX
+This adds the contact with name John Doe to game at index 1
 
 ![Adding a member](images/addmember_command.png)
 
@@ -498,7 +498,7 @@ deletemember g/INDEX n/PERSON_NAME
 deletemember g/1 n/John Doe
 ```
 
-This deletes the contact with name PERSON_NAME from game at INDEX
+This deletes the contact with name John Doe from game at index 1
 
 ![Deleting a member](images/deletemember_command.png)
 
@@ -516,7 +516,7 @@ editgamelocation g/INDEX pc/POSTAL_CODE
 editgamelocation g/1 pc/639798
 ```
 
-This changes the postal code of game at INDEX to POSTAL_CODE
+This changes the postal code of game at index 1 to 639798
 
 ![Editing Game Location](images/editgamelocation_command.png)
 ---
