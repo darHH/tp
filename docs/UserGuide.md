@@ -129,7 +129,7 @@ FitFriends combines the power of a Command Line Interface (CLI) with the conveni
 > 💡 **Tip**: Command words are case-sensitive, so you should only type `help`, and not `HELP`, `HeLp` or even `Help`.
 
 ---
-## <a id="basic-features"></a> 🌟 Features
+## <a id="basic-features"></a> 🌟 Basic Features
 
 ### Viewing Help
 
@@ -146,9 +146,9 @@ When you type `help` and press <kbd>Enter</kbd>, you'll see a message with a lin
 
 ---
 
-### Managing Contacts
+## Managing Contacts
 
-#### Add Contact
+### Add Contact
 
 Add contacts to your FitFriends list with details that help plan sporting activities.
 
@@ -174,7 +174,7 @@ This adds John Doe to your list of contacts with his details and shows he plays 
 > * Sport: Only valid sports from "Valid Sports List" are allowed. You can add valid sports to this list by using the `createsport` command.
 > * Tag: Tags are optional. You can add as many tags as you want to a contact (e.g., `t/bestfriend t/colleague`). Tags help you categorize your contacts.
 
-#### List All Contacts
+### List All Contacts
 
 View all your contacts in one place.
 
@@ -191,7 +191,7 @@ This displays all your contacts in the left panel, sorted by alphabetical order.
 > * You should run this command after adding, deleting or editing contacts to see the updated list.
 > * You should also run this command after running find or findsport commands to view the full list.
 
-#### Edit Contact
+### Edit Contact
 
 Update your contact's details as they change.
 
@@ -214,7 +214,7 @@ This updates the 2nd contact in your current FitFriends list with a new name, ph
 > * Adding a contact places them in the alphabetically sorted position in the list.
 > * "s/o" will not be accepted as part of a name, we recommend you enter this part of your contact's name as "s_o", "so" or even "s o" instead.
 
-#### Find Contacts by Name
+### Find Contacts by Name
 
 Quickly find contacts by searching for part of their name.
 
@@ -241,7 +241,7 @@ This will show all contacts whose names contain "James" or "Jake".
 > 💡 **Search Tip**: If you run edit, delete, addsport, deletesport commands immediately after this command, these commands will apply to the contact listed at the index as shown by the find command. Use this to manage your contacts without having to search for them manually!
 
 
-#### Delete Contact
+### Delete Contact
 
 Remove contacts from your FitFriends list.
 
@@ -259,7 +259,7 @@ This removes the 3rd contact in your current FitFriends list.
 
 ![Deleting a Friend](images/delete_command.png)
 
-#### Clear All Entries
+### Clear All Entries
 
 Start fresh by removing all contacts from your FitFriends list.
 
@@ -274,9 +274,9 @@ clear
 
 ---
 
-### Sports Management
+## Sports Management
 
-#### Add new Sport to Global List of Sports
+### Add new Sport to Global List of Sports
 Add new sports to the global sports list that can be added to your contacts.
 
 **Format**:
@@ -296,7 +296,7 @@ This adds archery to the global sports list that can be assigned to your contact
 > ⚠️ **Note**:
 > * Sport names entered in commands are case-insensitive and will be stored and displayed in lowercase.
 
-#### List All Sports
+### List All Sports
 View all available sports in the global sports list with their indices.
 
 **Format**:
@@ -310,7 +310,7 @@ This displays all sports in alphabetical order with numbers for reference.
 
 > 💡 **Tip**: Take note of the indices as they're needed when deleting sports from the global list.
 
-#### Delete Sport from Global List of Sports
+### Delete Sport from Global List of Sports
 
 Removes sport from the global sports list.
 
@@ -330,7 +330,7 @@ This removes the first sport in the alphabetically sorted global sports list.
 
 > ⚠️ **Warning**: Removing a sport from the global list means it can no longer be assigned to a contact.
 
-#### Add Sport to Contact
+### Add Sport to Contact
 
 Record which sports your contacts play to make planning activities easier.
 
@@ -352,7 +352,7 @@ This adds basketball to the list of sports played by the 2nd contact in your cur
 > * You can only add one sport at a time. For multiple sports, use the command several times.
 > * You can only add sports that exist in the global sports list.
 
-#### Delete Sport from Contact
+### Delete Sport from Contact
 
 Update your FitFriends list if a contact no longer plays a particular sport.
 
@@ -373,7 +373,7 @@ This removes basketball from the 2nd contact's list of played sports.
 > ⚠️ **Note**:
 > * This command has the same command name as deleting a sport from the global sports list. To prevent accidental deletion of sport from global sports list, ensure you add "s/SPORT" at the end of this command to delete a sport from a contact. 
 
-#### Find Contacts by Sport
+### Find Contacts by Sport
 
 Discover which contacts play specific sports—perfect for organizing game days!
 
@@ -393,7 +393,7 @@ This shows all contacts who play either basketball or tennis (or both).
 
 > 💡 **Pro-tip**: If you run edit, delete, addsport, deletesport commands immediately after this command, these commands will apply to the contact listed at the index as shown by the findsport command. Use this to manage your contacts without having to search for them manually!
 
-#### Find Contacts by Sport and Location
+### Find Contacts by Sport and Location
 
 Find sports contacts near a specific location—ideal for planning convenient meetups!
 
@@ -422,9 +422,9 @@ This shows all contacts who play tennis or hockey, sorted by their proximity to 
 
 ---
 
-### Game Management
+## Game Management
 
-<u>#### Add Game</u>
+### Add Game
 
 Organize your contacts into games for different activities or events.
 
@@ -444,7 +444,7 @@ This creates a new game called "badminton".
 ![Adding a Game](images/addgame_command.png)
 
 
-#### Delete Game
+### Delete Game
 
 Remove Games you no longer need.
 
@@ -464,7 +464,7 @@ This deletes the game at INDEX.
 ![Deleting a Game](images/deletegame_command.png)
 
 
-#### Add Member to Game
+### Add Member to Game
 
 Adds contacts as members to a particular game
 
@@ -478,7 +478,7 @@ addmember g/INDEX n/PERSON_NAME
 addmember g/1 n/Mary Jane
 ```
 
-#### Delete Member from Game
+### Delete Member from Game
 
 Delete members from a particular game
 
@@ -492,7 +492,7 @@ deletemember g/INDEX n/PERSON_NAME
 deletemember g/1 n/Mary Jane
 ```
 
-#### Edit Location of Game
+### Edit Location of Game
 
 **Format**:
 
