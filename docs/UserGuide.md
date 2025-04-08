@@ -94,7 +94,7 @@ FitFriends is designed to help **sporty young adults** connect, organize and par
    java -jar FitFriends.jar
    ```
 
-4. **You should see** the FitFriends loading screen. Congratulations! You're ready to start.
+4. **You should see** the FitFriends interface. Congratulations! You're ready to start.
 
 #### Using the Graphical Interface
 
@@ -102,9 +102,7 @@ FitFriends is designed to help **sporty young adults** connect, organize and par
 
    > ⚠️ **If this doesn't work**: Your system might not have associated .jar files with Java. Use the CLI method above or right-click the file and select "Open with Java".
 
-2. **Enter commands** in the command box at the bottom of the window and press <kbd>Enter</kbd> to execute them.
-
-![FitFriends Main UI](images/main_ui.png)
+2. **You should see** the FitFriends interface. Congratulations! You're ready to start.
 
 ---
 ## <a id="using-fitfriends"></a> 🏋️️ Using FitFriends
@@ -117,7 +115,13 @@ FitFriends combines the power of a Command Line Interface (CLI) with the conveni
 - **Friend List**: Displays all your contacts with their information
 - **Person Card**: Shows detailed information for each contact
 
-![Interface Components](images/interface.png)
+**Before you start**, we suggest:
+> 💡 **Tip**: Expand the size of the GUI window by clicking on and dragging the sides outwards, which we have done in our examples below.
+> 💡 **Tip**: Switch to light and dark mode by clicking on the button at the top right of the interface.
+
+<img src="images/main_ui_dark.png" alt="FitFriends Logo" height="400"/>
+<img src="images/main_ui_light.png" alt="FitFriends Logo" height="400"/>
+
 
 ### Command Format
 
@@ -261,14 +265,14 @@ This removes the 3rd contact in your current FitFriends list.
 
 ### Clear All Entries
 
-Start fresh by removing all contacts from your FitFriends list.
+Start fresh by removing all contacts and games from your FitFriends list.
 
 **Format**:
 ```
 clear
 ```
 
-> ⚠️ **Warning**: This action cannot be undone. All your contacts will be permanently removed.
+> ⚠️ **Warning**: This action cannot be undone. All your contacts and games will be permanently removed.
 
 ![Clearing All Entries](images/clear_command.png)
 
