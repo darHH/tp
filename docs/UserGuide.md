@@ -119,9 +119,8 @@ FitFriends combines the power of a Command Line Interface (CLI) with the conveni
 > 💡 **Tip**: Expand the size of the GUI window by clicking on and dragging the sides outwards, which we have done in our examples below.
 > 💡 **Tip**: Switch to light and dark mode by clicking on the button at the top right of the interface.
 
-<img src="images/main_ui_dark.png" alt="FitFriends UI" height="500"/>
-<img src="images/main_ui_light.png" alt="FitFriends UI" height="500"/>
-
+![FitFriends UI](images/main_ui_dark.png)
+![FitFriends UI](images/main_ui_light.png)
 
 ### Command Format
 
@@ -130,7 +129,7 @@ FitFriends combines the power of a Command Line Interface (CLI) with the conveni
 - Items with `...` after them can have multiple instances.
 - Parameters can be in any order.
 
-> 💡 **Tip**: Command words are case-sensitive, so you should only type `help`, and not `HELP`, `HeLp` or even `Help`.
+> ⚠️ **Note**: Command words are case-sensitive, so you should only type `help`, and not `HELP`, `HeLp` or even `Help`.
 
 ---
 ## <a id="basic-features"></a> 🌟 Basic Features
@@ -145,6 +144,7 @@ help
 ```
 
 When you type `help` and press <kbd>Enter</kbd>, you'll see a message with a link to this user guide.
+
 
 ![Help Command](images/help_command.png)
 
@@ -191,7 +191,7 @@ This displays all your contacts in the left panel, sorted by alphabetical order.
 
 ![Listing All Friends](images/list_command.png)
 
-> 💡 **List Tips**:
+> ⚠️ **Notes**:
 > * You should run this command after adding, deleting or editing contacts to see the updated list.
 > * You should also run this command after running find or findsport commands to view the full list.
 
@@ -213,9 +213,9 @@ This updates the 2nd contact in your current FitFriends list with a new name, ph
 
 ![Editing a Friend](images/edit_command.png)
 
-> 💡 **Edit Tips**:
+> ⚠️ **Notes**:
 > * Editing a tag will remove all existing tags as tags cannot be added sequentially (e.g., `edit t/bestfriend` followed by `edit t/colleague` will result in only the `colleague` tag remaining).
-> * Adding a contact places them in the alphabetically sorted position in the list.
+> * Adding a contact automatically places them in the alphabetically sorted position in the list.
 > * "s/o" will not be accepted as part of a name, we recommend you enter this part of your contact's name as "s_o", "so" or even "s o" instead.
 
 ### Find Contacts by Name
@@ -236,13 +236,12 @@ This will show all contacts whose names contain "James" or "Jake".
 
 ![Finding Friends](images/find_command.png)
 
-> ⚠️ **Note**:
+> ⚠️ **Notes**:
 > - Search keywords are case-insensitive
 > - Order of keywords doesn't matter
 > - Only full words are matched (e.g., "Han" won't match "Hans")
 > - Any contact matching at least one keyword will be shown
-
-> 💡 **Search Tip**: If you run edit, delete, addsport, deletesport commands immediately after this command, these commands will apply to the contact listed at the index as shown by the find command. Use this to manage your contacts without having to search for them manually!
+> - If you run edit, delete, addsport, deletesport commands immediately after this command, these commands will apply to the contact listed at the index as shown by the find command. Use this to manage your contacts without having to search for them manually!
 
 
 ### Delete Contact
@@ -312,7 +311,7 @@ This displays all sports in alphabetical order with numbers for reference.
 
 ![Listing All Sports](images/listsports_command.png)
 
-> 💡 **Tip**: Take note of the indices as they're needed when deleting sports from the global list.
+> ⚠️ **Note**: Take note of the indices as they're needed when deleting sports from the global list.
 
 ### Delete Sport from Global List of Sports
 
@@ -352,7 +351,7 @@ This adds basketball to the list of sports played by the 2nd contact in your cur
 
 ![Adding a Sport to a contact](images/addsport_command.png)
 
-> ⚠️ **Note**:
+> ⚠️ **Notes**:
 > * You can only add one sport at a time. For multiple sports, use the command several times.
 > * You can only add sports that exist in the global sports list.
 
@@ -415,12 +414,12 @@ This shows all contacts who play tennis or hockey, sorted by their proximity to 
 
 ![Finding by Sport and Location](images/findsport_location_command.png)
 
-> ⚠️ **Note**:
+> ⚠️ **Notes**:
 > * Search keywords are case-insensitive
 > * Proximity is calculated by contact's postal code
 > * More than 1 sport can be included in the search by adding s/SPORT_NAME
 
-> 💡 **Find Sport Tips**:
+> 💡 **Tips**:
 > * Use this feature to find the optimal meeting spot for your sports game!
 > * If you run edit, delete, addsport, deletesport commands immediately after this command, these commands will apply to the contact listed at the index as shown by the findsport command. Use this to manage your contacts without having to search for them manually!
 
@@ -479,8 +478,11 @@ addmember g/INDEX n/PERSON_NAME
 
 **Example**:
 ```
-addmember g/1 n/Mary Jane
+addmember g/1 n/John Doe
 ```
+This adds the contact with name PERSON_NAME to game at INDEX
+
+![Adding a member](images/addmember_command.png)
 
 ### Delete Member from Game
 
@@ -493,8 +495,12 @@ deletemember g/INDEX n/PERSON_NAME
 
 **Example**:
 ```
-deletemember g/1 n/Mary Jane
+deletemember g/1 n/John Doe
 ```
+
+This deletes the contact with name PERSON_NAME from game at INDEX
+
+![Deleting a member](images/deletemember_command.png)
 
 ### Edit Location of Game
 
@@ -507,8 +513,12 @@ editgamelocation g/INDEX pc/POSTAL_CODE
 
 **Example**:
 ```
-editgamelocation g/1 pc/119077
+editgamelocation g/1 pc/639798
 ```
+
+This changes the postal code of game at INDEX to POSTAL_CODE
+
+![Editing Game Location](images/editgamelocation_command.png)
 ---
 
 ## <a id="command-summary"></a>📝 Command Summary
